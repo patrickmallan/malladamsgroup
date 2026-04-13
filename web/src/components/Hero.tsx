@@ -21,11 +21,9 @@ export function Hero() {
         <p className="hero__tagline">Built to last. Built to belong.</p>
         <h1 className="display display--xl hero__headline">You belong here.</h1>
         <p className="hero__subhead">
-          Malladams Group designs structures built to last —
+          Most structures were never built to hold what you’re trying to create.
           <br />
-          from the land they stand on, to the spaces within them,
-          <br />
-          to the people who bring them to life.
+          We build the ones that can.
         </p>
         <a className="btn btn--primary hero__cta" href="#contact">
           Begin the Conversation

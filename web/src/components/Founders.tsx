@@ -11,69 +11,69 @@ export function Founders() {
         </h2>
         <p className="body-text founders__intro">
           Malladams Group was founded by Annissa Adams and Patrick Mallan — two
-          people who have spent their lives at the intersection of energy, beauty,
-          and structure, and who came together to build something the world is
-          ready for.
+          people who came together not just in partnership, but in a shared
+          conviction that the world is ready for structures built differently.
         </p>
 
-        <div className="founders__grid">
-          <article className="founder-card">
-            <div className="founder-card__photo founder-card__photo--abstract" />
-            <div className="founder-card__text">
-              <h3 className="founder-card__name">Annissa Adams</h3>
-              <p className="founder-card__role">Co-Founder</p>
-              <p className="body-text">
-                Annissa is a seer, a designer of energetic containers, and the
-                philosophical architect of the Malladams framework. Born in London
-                and rooted now in the mountains of British Columbia, she has spent
-                decades developing a sophisticated understanding of how energy
-                moves through space, systems, and people — drawing on astrology,
-                Human Design, sacred feminine traditions, and a lifetime of direct
-                intuitive perception.
-              </p>
-              <p className="body-text">
-                Her vision for Malladams Group began not in a boardroom but in a
-                moment of knowing: a vision of blue homes near water and mountains
-                that she later recognized as the land where the first project would
-                be built. She is a woman who does not wait for permission to see
-                clearly — and who has dedicated her work to building spaces that give
-                others that same quality of belonging.
-              </p>
-              <p className="body-text">
-                She brings to this work an uncompromising commitment to beauty,
-                truth, and structures that serve life rather than consume it.
-              </p>
-            </div>
-          </article>
-
-          <article className="founder-card">
-            <div className="founder-card__photo founder-card__photo--abstract" />
-            <div className="founder-card__text">
-              <h3 className="founder-card__name">Patrick Mallan</h3>
-              <p className="founder-card__role">Co-Founder</p>
-              <p className="body-text">
-                Patrick holds the work of Malladams Group in disciplined execution:
-                systems that remain coherent under pressure, technology chosen for
-                clarity rather than novelty, and a design sensitivity that honors
-                how a place is felt as much as how it is assembled. His path has
-                moved between building and digital craft; he treats each project as
-                a sequence of careful decisions—material, protocol, and
-                tool—intended to carry the same integrity across years.
-              </p>
-              <p className="body-text">
-                He understands Malladams&apos; vision as both pragmatic and
-                far-reaching: structures that last because they are honest in their
-                foundations, their spaces, and the cultures that sustain them.
-                Alongside Annissa, he translates intention into outcomes that remain
-                humane, coherent, and built for the long arc.
-              </p>
-              <p className="body-text">
-                He is drawn to a future where technology quietly serves life and
-                belonging—reducing friction without flattening soul—and where what
-                is built can be handed forward with care.
-              </p>
-            </div>
-          </article>
+        <div className="founders__narrative">
+          <p className="body-text">
+            Annissa and Patrick are, at their core, builders. Not just of spaces
+            and organizations — but of the kind of environment where people
+            remember what it feels like to belong somewhere completely.
+          </p>
+          <p className="body-text">
+            Annissa is a visionary and systems thinker whose greatest gift is
+            seeing what others miss. She doesn&apos;t just observe a space, an
+            organization, or a situation — she reads the architecture beneath it.
+            The patterns. The invisible structures that are either holding
+            something together or quietly pulling it apart. She has spent decades
+            developing a sophisticated understanding of how energy moves through
+            spaces, systems, and people, and translating that perception into
+            frameworks that are both deeply intuitive and rigorously practical.
+            Her vision for Malladams Group didn&apos;t begin with a business plan.
+            It began with a knowing — a clear perception, years ahead of its time,
+            of exactly what conscious, energetically grounded structures could
+            make possible for people who have spent their lives feeling slightly
+            out of place in the spaces built for them. She is a woman who does not
+            wait for permission to see clearly. And everything she builds is
+            designed to give others that same quality of arrival.
+          </p>
+          <p className="body-text">
+            Patrick is the man who makes the vision real — and has spent his life
+            developing the rare capacity to hold complexity without losing his
+            footing. As a sound designer and professional DJ, he spent years doing
+            something most people never learn: reading a room at the frequency
+            level. Understanding not just what people want, but what a space needs
+            to hold the moment, sustain the energy, and bring people fully into
+            themselves. That embodied intelligence — the ability to feel what a
+            space is doing and know exactly what it needs — is the same
+            intelligence he brings to every Malladams project. He builds systems
+            that remain coherent under pressure. He chooses technology for clarity,
+            not novelty. He understands that the quality of what lasts is
+            determined by the quality of the decisions beneath it.
+          </p>
+          <p className="body-text">
+            What makes them genuinely different — as partners and as founders — is
+            where they learned the fundamentals of everything they now build
+            professionally. Not in boardrooms or design schools. In family.
+            Between them they are raising children, navigating the full complexity
+            of modern family life, and doing it with the same intentionality they
+            bring to every structure they touch. Family, they will tell you, is
+            where you first encounter every leadership challenge, every nervous
+            system test, every question of belonging and safety and what it actually
+            takes to build something that holds. The emotional intelligence, the
+            capacity to repair, the discipline of showing up consistently even when
+            it&apos;s hard — these are not soft skills. They are the foundation of
+            every structure that lasts. Annissa and Patrick learned them at home
+            first. Now they build them into everything.
+          </p>
+          <p className="body-text">
+            Together they bring the full range: the visionary capacity to see what
+            wants to be built, and the grounded mastery to build it in a way that
+            endures. The pattern recognition and the execution. The frequency and
+            the form. Two people who have chosen, in every dimension of their
+            lives, to build things that last.
+          </p>
         </div>
       </div>
     </RevealSection>

@@ -6,6 +6,7 @@ import { Framework } from './components/Framework'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Problem } from './components/Problem'
+import { Values } from './components/Values'
 import { WhatWeDo } from './components/WhatWeDo'
 import './App.css'
 
@@ -21,6 +22,8 @@ function App() {
         <Problem />
         <div className="section-divider" aria-hidden />
         <Framework />
+        <div className="section-divider" aria-hidden />
+        <Values />
         <div className="section-divider" aria-hidden />
         <WhatWeDo />
         <div className="section-divider" aria-hidden />

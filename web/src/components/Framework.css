@@ -1,62 +1,64 @@
 .framework__title {
-  max-width: 22ch;
-  margin-bottom: 1.25rem;
+  max-width: 24ch;
+  margin-bottom: 1.65rem;
 }
 
 .framework__intro {
-  max-width: 38rem;
-  margin-bottom: 2.75rem;
+  max-width: var(--content-measure);
+  margin-bottom: 3.25rem;
+  line-height: 1.74;
 }
 
 .framework__layers {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 @media (min-width: 960px) {
   .framework__layers {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+    gap: 1.5rem 1.75rem;
   }
 }
 
 .layer-card {
-  padding: 1.75rem 1.5rem 2rem;
+  padding: 2rem 1.65rem 2.15rem;
   border-radius: 2px;
-  border: 1px solid rgba(27, 58, 45, 0.14);
-  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(28, 60, 47, 0.12);
+  background: rgba(242, 236, 228, 0.58);
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.75rem;
   min-height: 100%;
 }
 
 .layer-card__num {
   font-family: var(--font-display);
-  font-size: 2.5rem;
+  font-size: 2.35rem;
   font-weight: 500;
   line-height: 1;
   color: var(--color-gold);
-  opacity: 0.85;
+  opacity: 0.82;
 }
 
 .layer-card__title {
   font-family: var(--font-display);
-  font-size: 1.65rem;
+  font-size: 1.58rem;
   font-weight: 600;
   margin: 0;
   color: var(--color-forest);
-  line-height: 1.15;
+  line-height: 1.18;
 }
 
 .layer-card__label {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: 1.04rem;
   margin: 0;
-  color: rgba(196, 147, 122, 0.95);
+  color: rgba(90, 72, 62, 0.88);
 }
 
 .layer-card__body {
-  margin-top: 0.35rem;
+  margin-top: 0.25rem;
+  line-height: 1.72;
 }

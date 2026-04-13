@@ -1,37 +1,12 @@
 .problem__title {
-  max-width: 20ch;
-  margin-bottom: 2.5rem;
+  max-width: 22ch;
+  margin-bottom: 2.85rem;
 }
 
-.problem__grid {
-  display: grid;
-  gap: clamp(2rem, 5vw, 3.5rem);
-  grid-template-columns: 1fr;
+.problem__body {
+  max-width: var(--content-measure);
 }
 
-@media (min-width: 880px) {
-  .problem__grid {
-    grid-template-columns: 1.1fr 0.9fr;
-    align-items: start;
-  }
-}
-
-.problem__aside {
-  padding: 1.5rem 1.5rem 1.75rem;
-  border-radius: 2px;
-  border: 1px solid rgba(201, 168, 76, 0.22);
-  background: rgba(26, 20, 16, 0.35);
-}
-
-.problem__audience {
-  font-size: 0.98rem;
-}
-
-.problem__confirmation {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: var(--color-gold);
-  margin: 1.25rem 0 0;
-  line-height: 1.35;
+.problem__body .body-text {
+  line-height: 1.74;
 }

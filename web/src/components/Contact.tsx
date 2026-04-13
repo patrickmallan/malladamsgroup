@@ -132,17 +132,26 @@ export function Contact() {
             Ready to build something that lasts?
           </h2>
           <p className="body-text">
-            If you are developing a property, designing an organization, or simply
-            ready to create a life and legacy built on energetic integrity — we want
-            to hear from you.
+            If you&apos;ve been feeling the gap — between the space you&apos;re in
+            and the one you know is possible, between the organization you&apos;re
+            running and the one you know it could be — this is the conversation
+            you&apos;ve been waiting to have.
           </p>
           <p className="body-text">
-            A consultation with Malladams Group begins with a conversation. Not a
-            sales call. A genuine inquiry into what you are building and whether we
-            are the right partners to help you build it.
+            A consultation with Malladams Group is not a sales call. It is a
+            genuine inquiry into what you are building, what it needs to truly
+            hold, and whether we are the right partners to help you get there.
+          </p>
+          <p className="body-text">
+            We work with a small number of clients and projects at a time. Every
+            engagement begins personally — with Annissa and Patrick, not a team
+            member, not a process. With the people who will actually do the work.
           </p>
           <p className="contact__email">
             <a href="mailto:hello@malladamsgroup.com">hello@malladamsgroup.com</a>
+          </p>
+          <p className="body-text contact__closing">
+            We review every inquiry personally.
           </p>
         </div>
 
@@ -326,12 +335,8 @@ export function Contact() {
                   disabled={submitDisabled}
                   aria-busy={busy}
                 >
-                  {busy ? 'Sending…' : 'Request a Consultation'}
+                  {busy ? 'Sending…' : 'Begin the Conversation'}
                 </button>
-                <p className="contact__fineprint">
-                  We work with a small number of clients and projects at a time.
-                  Inquiries are reviewed personally by Annissa and Patrick.
-                </p>
               </>
             )}
           </form>

@@ -14,7 +14,7 @@ export function useHeroParallax() {
     const onScroll = () => {
       cancelAnimationFrame(frame)
       frame = requestAnimationFrame(() => {
-        setY(window.scrollY * 0.18)
+        setY(window.scrollY * 0.11)
       })
     }
 

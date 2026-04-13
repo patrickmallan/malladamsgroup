@@ -18,8 +18,8 @@ export function useReveal<T extends HTMLElement>(options?: {
         })
       },
       {
-        threshold: options?.threshold ?? 0.12,
-        rootMargin: options?.rootMargin ?? '0px 0px -8% 0px',
+        threshold: options?.threshold ?? 0.1,
+        rootMargin: options?.rootMargin ?? '0px 0px -6% 0px',
       }
     )
 
