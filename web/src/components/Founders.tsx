@@ -10,7 +10,7 @@ export function Founders() {
           The Ministry Behind the Mission
         </h2>
         <p className="body-text founders__intro">
-          Malladams Group was founded by Annissa Adams and Patrick Adams — two
+          Malladams Group was founded by Annissa Adams and Patrick Mallan — two
           people who have spent their lives at the intersection of energy, beauty,
           and structure, and who came together to build something the world is
           ready for.
@@ -49,7 +49,7 @@ export function Founders() {
           <article className="founder-card">
             <div className="founder-card__photo founder-card__photo--abstract" />
             <div className="founder-card__text">
-              <h3 className="founder-card__name">Patrick Adams</h3>
+              <h3 className="founder-card__name">Patrick Mallan</h3>
               <p className="founder-card__role">Co-Founder</p>
               <p className="body-text">
                 Patrick holds the work of Malladams Group in disciplined execution:

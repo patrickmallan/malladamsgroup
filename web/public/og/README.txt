@@ -1,22 +1,14 @@
-OG image for Malladams Group (social sharing)
-==============================================
+Open Graph image (historical note)
+===================================
 
-Place the final Open Graph image here as:
+The live social-sharing image is deployed at the site root:
 
-  og-image.png
+  /og-image.jpg   →   public/og-image.jpg
 
-Recommended:
-  - Aspect ratio: 1200 × 630 px (1.91:1)
-  - Format: PNG or JPG
-  - Visual tone: luxurious, grounded, iridescent — aligned with the site brief
-  - No watermarked stock; use original or licensed imagery only
+Absolute URL (production):
 
-The site references this file at:
+  https://www.malladamsgroup.com/og-image.jpg
 
-  /og/og-image.png
+Metadata is defined in index.html (og:* and twitter:* tags).
 
-After deployment, social platforms will resolve the absolute URL:
-
-  https://malladamsgroup.com/og/og-image.png
-
-Until the file exists, crawlers may show a broken preview image — add the asset before a public launch push.
+This folder previously documented /og/og-image.png; that path is no longer used.
