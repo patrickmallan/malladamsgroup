@@ -1,0 +1,36 @@
+import { useHeroParallax } from '../hooks/useHeroParallax'
+import './Hero.css'
+
+export function Hero() {
+  const parallaxY = useHeroParallax()
+
+  return (
+    <section id="hero" className="hero">
+      <div
+        className="hero__parallax"
+        style={{ transform: `translate3d(0, ${parallaxY}px, 0)` }}
+        aria-hidden
+      >
+        <div className="hero__glow hero__glow--one" />
+        <div className="hero__glow hero__glow--two" />
+        <div className="hero__glow hero__glow--three" />
+      </div>
+      <div className="hero__shimmer" aria-hidden />
+
+      <div className="hero__content shell">
+        <p className="hero__tagline">Built to last. Built to belong.</p>
+        <h1 className="display display--xl hero__headline">You belong here.</h1>
+        <p className="hero__subhead">
+          Malladams Group designs structures built to last —
+          <br />
+          from the land they stand on, to the spaces within them,
+          <br />
+          to the people who bring them to life.
+        </p>
+        <a className="btn btn--primary hero__cta" href="#contact">
+          Begin the Conversation
+        </a>
+      </div>
+    </section>
+  )
+}

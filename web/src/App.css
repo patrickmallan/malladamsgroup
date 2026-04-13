@@ -1,0 +1,5 @@
+/* App-level layout hooks */
+
+main {
+  min-height: 100svh;
+}

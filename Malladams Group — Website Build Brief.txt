@@ -1,0 +1,571 @@
+# Malladams Group — Website Build Brief
+
+
+
+### For Patrick: Claude + Cursor Implementation Document
+
+
+
+-----
+
+
+
+## 01. PROJECT OVERVIEW
+
+
+
+**Company:** Malladams Group  
+
+**Website:** malladamsgroup.com  
+
+**Type:** Single-page website (soft launch)  
+
+**Purpose:** Establish public presence, communicate philosophy, invite consultation inquiries  
+
+**Built by:** Patrick Adams (using Claude + Cursor)
+
+
+
+-----
+
+
+
+## 02. BRAND FOUNDATION
+
+
+
+### Tagline
+
+
+
+> **“You belong here.”**
+
+
+
+### Supporting Tagline
+
+
+
+> *Built to last. Built to belong.*
+
+
+
+### Mission Statement
+
+
+
+Malladams Group exists at the intersection of energy, design, and legacy. We believe that 99.9% of existing structures — physical, organizational, and social — were built without energetic integrity at their foundation. The result is spaces and systems that exhaust, deplete, and ultimately collapse. We are building a different way forward. We call it **energetic architecture**: a three-layer framework that ensures every structure we touch — from the land it sits on to the people who move through it — is designed to sustain and amplify life.
+
+
+
+### The Core Belief
+
+
+
+Energy is the missing link. Every structure that lasts — truly lasts, across generations — was built on energetic integrity, whether its creators knew it or not. We know it. And we build accordingly.
+
+
+
+### What Malladams Group Does
+
+
+
+We operate on two tracks:
+
+
+
+**Development** — We acquire, design, and activate properties using our energetic architecture framework. Our first development is underway in Squamish, British Columbia — a living proof of concept for everything we believe.
+
+
+
+**Consultancy** — We guide organizations, developers, entrepreneurs, and visionaries through the same three-layer framework for their own projects. Every development we build becomes a case study. Every system we design becomes a template.
+
+
+
+-----
+
+
+
+## 03. THE FRAMEWORK — “THE THREE LAYERS”
+
+
+
+This is the intellectual core of the brand. It must be presented clearly and beautifully on the site.
+
+
+
+### Layer One: Land & Location
+
+
+
+*Before a single decision is made.*
+
+We begin where most people never think to begin — with the energetic quality of the land itself. Not every site can hold every vision. We help identify locations and properties that are energetically aligned with the life meant to be lived and built within them. Site selection is not just practical. It is sacred.
+
+
+
+### Layer Two: Physical Space
+
+
+
+*Form, function, and beauty as one.*
+
+We design physical environments where nothing is arbitrary. Every material, every proportion, every threshold is chosen with intention. We work at the intersection of energetic principles, architectural integrity, and aesthetic beauty — because beauty is not decoration. Beauty is a signal that a space is in right relationship with itself.
+
+
+
+### Layer Three: Operating Structures
+
+
+
+*How humans move through and within the space.*
+
+A beautiful building with a broken internal culture is still a broken structure. The third layer is how people are hired, how leadership is practiced, how daily protocols are designed — the invisible architecture that either sustains or drains the life force of everyone inside. We design this too.
+
+
+
+-----
+
+
+
+## 04. WHO THIS IS FOR
+
+
+
+The visitor we are speaking to:
+
+
+
+They are awakening. They understand that the current structures — economic, architectural, organizational, social — are failing. Not because people didn’t try, but because energy was never part of the blueprint. They want to create something lasting. A legacy. Something conscious and alive — filled with love, connection, belonging, and longevity. They are not looking for a service. They are looking for confirmation that someone else sees what they see — and has built a way through it.
+
+
+
+**Malladams Group is that confirmation.**
+
+
+
+-----
+
+
+
+## 05. SITE ARCHITECTURE
+
+
+
+Single page, scrolling. Sections in order:
+
+
+
+1. **Hero** — Full screen. Tagline. Feeling of arrival.
+
+1. **The Problem** — Why existing structures fail. Energy as the missing link.
+
+1. **The Framework** — The Three Layers (Land, Space, Operating Structures)
+
+1. **What We Do** — Development + Consultancy explained
+
+1. **Our First Project** — Squamish, BC (brief, atmospheric — proof of concept)
+
+1. **The Founders** — Annissa + Patrick (named, with bios)
+
+1. **Call to Action** — Consultation inquiry
+
+
+
+-----
+
+
+
+## 06. SECTION COPY
+
+
+
+### SECTION 1 — HERO
+
+
+
+**Headline:**
+
+
+
+> You belong here.
+
+
+
+**Subheadline:**
+
+
+
+> Malladams Group designs structures built to last —
+
+> from the land they stand on, to the spaces within them,
+
+> to the people who bring them to life.
+
+
+
+**CTA Button:** `Begin the Conversation`
+
+
+
+-----
+
+
+
+### SECTION 2 — THE PROBLEM
+
+
+
+**Headline:**
+
+
+
+> Something is missing from the blueprint.
+
+
+
+**Body:**
+
+Nearly every structure built in the modern world — every building, every organization, every system — was designed without one essential element: energetic integrity.
+
+
+
+The result is spaces that exhaust rather than restore. Organizations that burn through their people. Legacies that don’t hold.
+
+
+
+This is not a design failure. It is not a leadership failure. It is an architectural failure at the most fundamental level — the energetic foundation was never laid.
+
+
+
+We are here to change that.
+
+
+
+**Pull Quote:**
+
+
+
+> *“Energy is not an add-on. It is the missing link between structures that survive and structures that last.”*
+
+
+
+-----
+
+
+
+### SECTION 3 — THE FRAMEWORK
+
+
+
+**Headline:**
+
+
+
+> Energetic Architecture. Three Layers. One Integrated Vision.
+
+
+
+**Intro:**
+
+Most firms touch one layer of a project. Nobody integrates all three. This is what makes Malladams Group different — and why what we build lasts.
+
+
+
+**Layer 01 — Land & Location**
+
+*Before a single decision is made.*
+
+We begin where most people never think to begin: with the energetic quality of the land itself. Not every site can hold every vision. We identify locations and properties that are energetically aligned with the life meant to be built within them. Site selection is not just practical. It is sacred.
+
+
+
+**Layer 02 — Physical Space**
+
+*Form, function, and beauty as one.*
+
+We design environments where nothing is arbitrary. Every material, proportion, and threshold is chosen with intention — at the intersection of energetic principles, architectural integrity, and aesthetic beauty. Beauty is not decoration. It is a signal that a space is in right relationship with itself.
+
+
+
+**Layer 03 — Operating Structures**
+
+*How humans move through and within the space.*
+
+A beautiful building with a broken internal culture is still a broken structure. We design the invisible architecture too — how people are hired, how leadership is practiced, how daily life flows. This is the layer that sustains the life force of everyone inside.
+
+
+
+-----
+
+
+
+### SECTION 4 — WHAT WE DO
+
+
+
+**Headline:**
+
+
+
+> We build. And we guide others to build.
+
+
+
+**Development:**
+
+Malladams Group acquires, designs, and activates properties using our energetic architecture framework. We do not just advise on this work — we do it ourselves. Every property we develop is a living proof of concept. A demonstration that this approach works, that it lasts, and that it is beautiful.
+
+
+
+**Consultancy:**
+
+We bring the same three-layer framework to the projects of visionary developers, entrepreneurs, and organizations who are ready to build differently. If you are creating something meant to last — a home, a business, a community space — we want to be part of it from the beginning.
+
+
+
+-----
+
+
+
+### SECTION 5 — OUR FIRST PROJECT
+
+
+
+**Headline:**
+
+
+
+> Squamish, British Columbia.
+
+> Where it begins.
+
+
+
+**Body:**
+
+Nestled between mountains and water on the traditional territory of the Sḵwx̱wú7mesh Nation, Squamish is our first development — chosen not just for its extraordinary natural beauty, but for its energetic capacity to hold what we are building.
+
+
+
+This is where Malladams Group’s vision becomes physical. Where the framework meets the land. Where the proof of concept lives.
+
+
+
+*More details coming as the project unfolds.*
+
+
+
+-----
+
+
+
+### SECTION 6 — THE FOUNDERS
+
+
+
+**Headline:**
+
+
+
+> The Ministry Behind the Mission
+
+
+
+**Intro:**
+
+Malladams Group was founded by Annissa Adams and Patrick Adams — two people who have spent their lives at the intersection of energy, beauty, and structure, and who came together to build something the world is ready for.
+
+
+
+-----
+
+
+
+**Annissa Adams**
+
+*Co-Founder*
+
+
+
+Annissa is a seer, a designer of energetic containers, and the philosophical architect of the Malladams framework. Born in London and rooted now in the mountains of British Columbia, she has spent decades developing a sophisticated understanding of how energy moves through space, systems, and people — drawing on astrology, Human Design, sacred feminine traditions, and a lifetime of direct intuitive perception.
+
+
+
+Her vision for Malladams Group began not in a boardroom but in a moment of knowing: a vision of blue homes near water and mountains that she later recognized as the land where the first project would be built. She is a woman who does not wait for permission to see clearly — and who has dedicated her work to building spaces that give others that same quality of belonging.
+
+
+
+She brings to this work an uncompromising commitment to beauty, truth, and structures that serve life rather than consume it.
+
+
+
+-----
+
+
+
+**Patrick Adams**
+
+*Co-Founder*
+
+
+
+[PATRICK — please add your bio here. Include: your background, what you bring to the work, how you see the Malladams vision, and anything about your approach to building, technology, and the future you want to create. Write in third person to match Annissa’s bio. Aim for 4–6 sentences that feel true to you.]
+
+
+
+-----
+
+
+
+### SECTION 7 — CALL TO ACTION
+
+
+
+**Headline:**
+
+
+
+> Ready to build something that lasts?
+
+
+
+**Body:**
+
+If you are developing a property, designing an organization, or simply ready to create a life and legacy built on energetic integrity — we want to hear from you.
+
+
+
+A consultation with Malladams Group begins with a conversation. Not a sales call. A genuine inquiry into what you are building and whether we are the right partners to help you build it.
+
+
+
+**CTA Button:** `Request a Consultation`
+
+
+
+**Sub-copy:**
+
+*We work with a small number of clients and projects at a time. Inquiries are reviewed personally by Annissa and Patrick.*
+
+
+
+**Contact:** hello@malladamsgroup.com
+
+
+
+-----
+
+
+
+## 07. VISUAL DIRECTION
+
+
+
+### Aesthetic
+
+
+
+**Luxurious. Alive. Grounded. Iridescent.**
+
+Think dragon energy — rich depth, warmth, power without aggression. Not cold luxury. Living luxury. The kind of space that exhales when you walk into it.
+
+
+
+### Color Palette (suggested — Patrick can refine)
+
+
+
+- **Deep forest green** `#1B3A2D` — primary dark tone
+
+- **Warm obsidian** `#1A1410` — backgrounds
+
+- **Burnished gold** `#C9A84C` — accent, hover states, dividers
+
+- **Dusty rose / antique blush** `#C4937A` — secondary accent, warmth
+
+- **Cream / warm white** `#F5EFE6` — body text, light sections
+
+- **Iridescent overlay** — subtle shimmer/gradient layer on hero and section dividers (think oil-on-water, abalone, dragon scale)
+
+
+
+### Typography
+
+
+
+- **Display / Headlines:** Something with presence and soul — suggested: *Cormorant Garamond* (elegant, historic, architectural) or *Playfair Display* (luxurious, feminine power)
+
+- **Body:** *Jost* or *DM Sans* — clean, modern, highly readable
+
+- **Accent / Pull Quotes:** *Cormorant Garamond Italic* — for atmosphere
+
+
+
+### Motion & Feel
+
+
+
+- Slow, intentional scroll reveals (fade up, not bounce)
+
+- Subtle parallax on hero section
+
+- Hover states on CTAs: gold glow or gentle shimmer
+
+- No aggressive animations — everything moves like it has weight and intention
+
+- Section transitions: gentle fade, not hard cuts
+
+
+
+### Imagery
+
+
+
+- **Founders photo:** Family photo (Annissa with family) — background to be replaced with abstract, rich, atmospheric imagery. Deep tones, iridescent quality, not literal (no mountains, no interiors — pure color and light abstraction). Think: deep jewel tones dissolving into each other. Abalone. The inside of a geode.
+
+- **Supporting imagery:** Where stock or generated images are used — natural materials (stone, wood, water, light through glass), architectural details, earth and sky. Nothing corporate. Nothing generic.
+
+
+
+### Overall UI Principles
+
+
+
+- **Super user friendly is non-negotiable.** Navigation must be effortless. CTAs must be obvious. Mobile must be perfect.
+
+- Generous white space (or dark space) — let things breathe
+
+- Nothing cluttered. Nothing competing.
+
+- Every element earns its place.
+
+
+
+-----
+
+
+
+## 08. TECHNICAL NOTES FOR PATRICK
+
+
+
+- **Framework:** Builder’s choice — React preferred for future scalability
+
+- **Single page scroll** with smooth anchor navigation
+
+- **Mobile-first** — must be flawless on phone
+
+- **Contact form** on CTA section — fields: Name, Email, What are you building? (text area), How did you find us?
+
+- Form submission: connect to hello@malladamsgroup.com (or preferred backend)
+
+- **No stock photo services with watermarks** — use Unsplash, generated imagery, or provided photos only
+
+- Founders photo provided separately — needs background replacement to abstract/atmospheric before use
+
+- **Domain:** malladamsgroup.com — confirm availability and connect on deployment
+
+- **Meta description for SEO:** *“Malladams Group designs structures built to last — from land selection to physical space to operating systems — using energetic architecture as the foundation.”*
+
+- **Page title:** Malladams Group — You Belong Here

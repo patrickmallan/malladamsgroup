@@ -1,0 +1,348 @@
+/* Malladams Group — design tokens from build brief */
+
+:root {
+  --color-forest: #1b3a2d;
+  --color-obsidian: #1a1410;
+  --color-gold: #c9a84c;
+  --color-gold-soft: rgba(201, 168, 76, 0.35);
+  --color-rose: #c4937a;
+  --color-cream: #f5efe6;
+  --color-cream-muted: rgba(245, 239, 230, 0.72);
+
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'Jost', system-ui, sans-serif;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --header-h: 4rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .hero__shimmer,
+  .btn--primary::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .btn--primary:active,
+  .btn--ghost:active {
+    transform: none;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  padding: 0.65rem 1rem;
+  background: var(--color-cream);
+  color: var(--color-obsidian);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+  transform: translateY(-120%);
+  transition: transform 0.25s var(--ease-out);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  font-weight: 400;
+  color: var(--color-cream);
+  background: var(--color-obsidian);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout */
+.shell {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.section {
+  position: relative;
+  padding-block: clamp(4.25rem, 10vw, 7.5rem);
+}
+
+.section--tight-top {
+  padding-top: clamp(3rem, 8vw, 5rem);
+}
+
+.section--forest {
+  background: var(--color-forest);
+}
+
+.section--light {
+  background: var(--color-cream);
+  color: var(--color-obsidian);
+}
+
+.section--light .display,
+.section--light .eyebrow {
+  color: var(--color-forest);
+}
+
+.section--light .eyebrow {
+  color: rgba(27, 58, 45, 0.85);
+}
+
+.section--light .body-text,
+.section--light .supporting-line {
+  color: rgba(26, 20, 16, 0.78);
+}
+
+.section--light .pull-quote {
+  color: var(--color-obsidian);
+  border-left-color: var(--color-gold);
+}
+
+.section--light .layer-card {
+  background: rgba(245, 239, 230, 0.65);
+  border-color: rgba(27, 58, 45, 0.12);
+}
+
+.section--light .layer-card__label {
+  color: rgba(27, 58, 45, 0.85);
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold-soft),
+    var(--color-rose),
+    var(--color-gold-soft),
+    transparent
+  );
+  opacity: 0.55;
+  margin: 0 auto;
+  max-width: min(48rem, 90%);
+}
+
+/* Typography */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-rose);
+  margin: 0 0 1rem;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  color: var(--color-cream);
+  margin: 0;
+}
+
+.display--xl {
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
+}
+
+.display--lg {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+}
+
+.display--md {
+  font-size: clamp(1.65rem, 3.2vw, 2.25rem);
+}
+
+.body-text {
+  color: var(--color-cream-muted);
+  margin: 0;
+}
+
+.body-text + .body-text {
+  margin-top: 1.25rem;
+}
+
+.pull-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  line-height: 1.45;
+  color: var(--color-cream);
+  border-left: 3px solid var(--color-gold);
+  padding-left: 1.5rem;
+  margin: 2.5rem 0 0;
+}
+
+.supporting-line {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-rose);
+  margin: 1rem 0 0;
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.75rem;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition:
+    color 0.45s var(--ease-out),
+    background 0.45s var(--ease-out),
+    border-color 0.45s var(--ease-out),
+    box-shadow 0.45s var(--ease-out),
+    transform 0.2s var(--ease-out),
+    opacity 0.45s var(--ease-out);
+}
+
+.btn--primary {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(201, 168, 76, 0.95) 0%,
+    rgba(196, 147, 122, 0.55) 100%
+  );
+  color: var(--color-obsidian);
+  border-color: rgba(201, 168, 76, 0.6);
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(245, 239, 230, 0.08),
+    0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.btn--primary::after {
+  content: '';
+  position: absolute;
+  inset: -40%;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.8s var(--ease-out);
+}
+
+.btn--primary:hover:not(:disabled) {
+  box-shadow:
+    0 0 24px var(--color-gold-soft),
+    0 12px 48px rgba(0, 0, 0, 0.45);
+}
+
+.btn--primary:hover:not(:disabled)::after {
+  transform: translateX(100%);
+}
+
+.btn--primary:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow:
+    0 0 16px var(--color-gold-soft),
+    0 8px 28px rgba(0, 0, 0, 0.4);
+}
+
+.btn--primary:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.btn--primary:disabled::after {
+  display: none;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--color-cream);
+  border-color: rgba(245, 239, 230, 0.22);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.btn--ghost:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn--ghost:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition:
+    opacity 0.85s var(--ease-out),
+    transform 0.85s var(--ease-out);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

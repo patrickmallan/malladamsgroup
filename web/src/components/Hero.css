@@ -1,0 +1,140 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--header-h);
+  padding-bottom: 3rem;
+  overflow: hidden;
+  background: radial-gradient(
+      ellipse 120% 80% at 50% 0%,
+      rgba(27, 58, 45, 0.95) 0%,
+      var(--color-obsidian) 55%
+    ),
+    var(--color-obsidian);
+}
+
+.hero__parallax {
+  position: absolute;
+  inset: -15% -10% -25%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  mix-blend-mode: screen;
+}
+
+.hero__glow--one {
+  width: min(55vw, 28rem);
+  height: min(55vw, 28rem);
+  top: 10%;
+  left: 15%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(196, 147, 122, 0.9),
+    rgba(27, 58, 45, 0.4) 60%,
+    transparent 70%
+  );
+}
+
+.hero__glow--two {
+  width: min(70vw, 36rem);
+  height: min(70vw, 36rem);
+  bottom: 0;
+  right: 5%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(201, 168, 76, 0.55),
+    rgba(80, 120, 140, 0.25) 50%,
+    transparent 65%
+  );
+}
+
+.hero__glow--three {
+  width: min(90vw, 40rem);
+  height: min(90vw, 40rem);
+  top: 35%;
+  left: 40%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(100, 180, 160, 0.22),
+    rgba(40, 60, 90, 0.2) 45%,
+    transparent 60%
+  );
+}
+
+.hero__shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.04) 45%,
+    rgba(201, 168, 76, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 55%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: hero-shimmer 18s ease-in-out infinite;
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+@keyframes hero-shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 44rem;
+  padding-inline: 0.25rem;
+}
+
+.hero__tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-rose);
+  margin: 0 0 1.25rem;
+}
+
+.hero__headline {
+  margin-bottom: 1.5rem;
+}
+
+.hero__subhead {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  line-height: 1.7;
+  color: var(--color-cream-muted);
+  margin: 0 0 2.25rem;
+}
+
+.hero__cta {
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 600px) {
+  .hero__subhead br {
+    display: none;
+  }
+
+  .hero__subhead {
+    max-width: 22rem;
+    margin-inline: auto;
+  }
+}
