@@ -106,30 +106,55 @@
   padding-inline: clamp(0.5rem, 2vw, 1rem);
 }
 
-/* Supporting line above headline — direct size/presence; still below display headline */
+/* Supporting line (“Built to last…”) — explicit step scale: 16 → 18 → 20px */
 .hero__tagline {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: clamp(1.125rem, 2.45vw, 1.2rem);
-  color: rgba(242, 232, 220, 0.98);
+  font-size: 1rem;
+  color: rgba(244, 236, 226, 0.99);
   margin: 0 0 1.5rem;
-  letter-spacing: 0.003em;
-  line-height: 1.4;
+  letter-spacing: 0;
+  line-height: 1.38;
 }
 
 .hero__headline {
   margin-bottom: 1.75rem;
 }
 
+/* Subhead — explicit step scale: ~18 → 20 → 22px; stronger than previous faint band */
 .hero__subhead {
   font-family: var(--font-body);
-  font-size: clamp(1.06rem, 2.1vw, 1.16rem);
-  line-height: 1.76;
-  color: var(--color-cream-muted);
+  font-size: 1.125rem;
+  line-height: 1.66;
+  letter-spacing: -0.012em;
+  color: rgba(245, 240, 232, 0.94);
   margin: 0 0 2.5rem;
-  max-width: 36rem;
+  max-width: 38rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 600px) {
+  .hero__tagline {
+    font-size: 1.125rem;
+  }
+
+  .hero__subhead {
+    font-size: 1.25rem;
+    line-height: 1.64;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__tagline {
+    font-size: 1.25rem;
+  }
+
+  .hero__subhead {
+    font-size: 1.375rem;
+    line-height: 1.62;
+    max-width: 40rem;
+  }
 }
 
 .hero__cta {
