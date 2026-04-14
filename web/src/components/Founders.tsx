@@ -15,13 +15,26 @@ export function Founders() {
           conviction that the world is ready for structures built differently.
         </p>
 
-        <div className="founders__narrative">
-          <p className="body-text">
+        <div className="founders__content">
+          <figure className="founders__figure">
+            <img
+              className="founders__image"
+              src="/Malladams%20Family.webp"
+              width={1024}
+              height={1536}
+              loading="lazy"
+              decoding="async"
+              alt="Annissa Adams and Patrick Mallan with their children. The Malladams Group founders at home — the lived foundation behind their work building structures that hold."
+            />
+          </figure>
+
+          <div className="founders__narrative">
+            <p className="body-text">
             Annissa and Patrick are, at their core, builders. Not just of spaces
             and organizations — but of the kind of environment where people
             remember what it feels like to belong somewhere completely.
-          </p>
-          <p className="body-text">
+            </p>
+            <p className="body-text">
             Annissa is a visionary and systems thinker whose greatest gift is
             seeing what others miss. She doesn&apos;t just observe a space, an
             organization, or a situation — she reads the architecture beneath it.
@@ -37,8 +50,8 @@ export function Founders() {
             out of place in the spaces built for them. She is a woman who does not
             wait for permission to see clearly. And everything she builds is
             designed to give others that same quality of arrival.
-          </p>
-          <p className="body-text">
+            </p>
+            <p className="body-text">
             Patrick is the man who makes the vision real — and has spent his life
             developing the rare capacity to hold complexity without losing his
             footing. As a sound designer and professional DJ, he spent years doing
@@ -51,8 +64,8 @@ export function Founders() {
             that remain coherent under pressure. He chooses technology for clarity,
             not novelty. He understands that the quality of what lasts is
             determined by the quality of the decisions beneath it.
-          </p>
-          <p className="body-text">
+            </p>
+            <p className="body-text">
             What makes them genuinely different — as partners and as founders — is
             where they learned the fundamentals of everything they now build
             professionally. Not in boardrooms or design schools. In family.
@@ -66,14 +79,15 @@ export function Founders() {
             it&apos;s hard — these are not soft skills. They are the foundation of
             every structure that lasts. Annissa and Patrick learned them at home
             first. Now they build them into everything.
-          </p>
-          <p className="body-text">
+            </p>
+            <p className="body-text">
             Together they bring the full range: the visionary capacity to see what
             wants to be built, and the grounded mastery to build it in a way that
             endures. The pattern recognition and the execution. The frequency and
             the form. Two people who have chosen, in every dimension of their
             lives, to build things that last.
-          </p>
+            </p>
+          </div>
         </div>
       </div>
     </RevealSection>
