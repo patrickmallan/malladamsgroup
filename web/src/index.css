@@ -1,5 +1,24 @@
 /* Malladams Group — design tokens (feminine luxury pass: warmer mineral palette, spatial rhythm) */
 
+/* Metric-tuned local fallbacks: narrows visible size jump before Google webfonts paint (size-adjust ~ empirical) */
+@font-face {
+  font-family: 'MG Cormorant Fallback';
+  src: local('Georgia');
+  size-adjust: 93%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'MG Jost Fallback';
+  src: local('Segoe UI'), local('Helvetica Neue'), local('Arial');
+  size-adjust: 97%;
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
 :root {
   /* Warmer darks + mineral lights — dusk / patina, not cold grey */
   --color-forest: #1c3c2f;
@@ -11,8 +30,10 @@
   /* Body / secondary: clearer presence without harsh contrast */
   --color-cream-muted: rgba(241, 235, 226, 0.84);
 
-  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  --font-body: 'Jost', system-ui, sans-serif;
+  --font-display:
+    'Cormorant Garamond', 'MG Cormorant Fallback', Georgia, 'Times New Roman',
+    serif;
+  --font-body: 'Jost', 'MG Jost Fallback', system-ui, sans-serif;
 
   /* Typography floor — confident modern luxury (small text readable, hierarchy intact) */
   --text-body-size: 1.09375rem;
