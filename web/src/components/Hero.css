@@ -106,15 +106,15 @@
   padding-inline: clamp(0.5rem, 2vw, 1rem);
 }
 
-/* Tagline only — “Built to last…”: 18 → 20 → 22px (do not alter .hero__subhead here) */
+/* Tagline only — “Built to last…”: stepped above .hero__subhead (italic reads smaller at same rem) */
 .hero__tagline {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.125rem;
-  color: rgba(246, 238, 228, 0.99);
+  font-size: 1.3125rem;
+  color: rgba(248, 241, 232, 1);
   margin: 0 0 1.5rem;
-  letter-spacing: -0.01em;
-  line-height: 1.36;
+  letter-spacing: -0.012em;
+  line-height: 1.34;
 }
 
 .hero__headline {
@@ -136,7 +136,7 @@
 
 @media (min-width: 600px) {
   .hero__tagline {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .hero__subhead {
@@ -147,7 +147,7 @@
 
 @media (min-width: 1024px) {
   .hero__tagline {
-    font-size: 1.375rem;
+    font-size: 1.625rem;
   }
 
   .hero__subhead {
