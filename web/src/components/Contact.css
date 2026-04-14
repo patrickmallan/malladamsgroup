@@ -196,10 +196,15 @@ textarea.contact__input {
   color: #e8c9c9;
 }
 
-.contact__submit {
+/* Full-width layout only — same .btn--primary surface as hero (see index.css) */
+.contact__form .btn--primary {
   width: 100%;
   margin-top: 0.35rem;
   min-height: 3.05rem;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  mix-blend-mode: normal;
 }
 
 .contact__feedback {

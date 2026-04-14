@@ -78,7 +78,9 @@ export function Contact() {
 
     if (!hasFormBackend) {
       setStatus('error')
-      setErrorMessage('')
+      setErrorMessage(
+        'The inquiry form is not connected yet. Please write to hello@malladamsgroup.com.'
+      )
       return
     }
 
@@ -121,7 +123,8 @@ export function Contact() {
 
   const busy = status === 'sending'
   const locked = busy || status === 'success'
-  const submitDisabled = busy || !hasFormBackend
+  /* Only disable while sending — same bright CTA as hero; missing backend is handled in onSubmit */
+  const submitDisabled = busy
 
   return (
     <RevealSection id="contact" className="section section--contact">
@@ -330,7 +333,7 @@ export function Contact() {
               <>
                 <button
                   type="submit"
-                  className="btn btn--primary contact__submit"
+                  className="btn btn--primary"
                   disabled={submitDisabled}
                   aria-busy={busy}
                 >
