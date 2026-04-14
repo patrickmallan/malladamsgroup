@@ -92,7 +92,7 @@ export function Contact() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           access_key: accessKey,
-          subject: 'Consultation inquiry — malladamsgroup.com',
+          subject: 'Consultation inquiry, malladamsgroup.com',
           name,
           email,
           from_name: name,
@@ -132,9 +132,9 @@ export function Contact() {
             Ready to build something that lasts?
           </h2>
           <p className="body-text">
-            If you&apos;ve been feeling the gap — between the space you&apos;re in
-            and the one you know is possible, between the organization you&apos;re
-            running and the one you know it could be — this is the conversation
+            If you&apos;ve been feeling the gap between the space you&apos;re in
+            and the one you know is possible, and between the organization you&apos;re
+            running and the one you know it could be, this is the conversation
             you&apos;ve been waiting to have.
           </p>
           <p className="body-text">
@@ -144,7 +144,7 @@ export function Contact() {
           </p>
           <p className="body-text">
             We work with a small number of clients and projects at a time. Every
-            engagement begins personally — with Annissa and Patrick, not a team
+            engagement begins personally, with Annissa and Patrick, not a team
             member, not a process. With the people who will actually do the work.
           </p>
           <p className="contact__email">

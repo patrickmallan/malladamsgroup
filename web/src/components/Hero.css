@@ -106,7 +106,7 @@
   padding-inline: clamp(0.5rem, 2vw, 1rem);
 }
 
-/* Tagline only — “Built to last…”: stepped above .hero__subhead (italic reads smaller at same rem) */
+/* Tagline only ("Built to last…"): stepped above .hero__subhead (italic reads smaller at same rem) */
 .hero__tagline {
   font-family: var(--font-display);
   font-style: italic;
@@ -121,7 +121,7 @@
   margin-bottom: 1.75rem;
 }
 
-/* Subhead — explicit step scale: ~18 → 20 → 22px; stronger than previous faint band */
+/* Subhead: explicit step scale ~18-22px; stronger than previous faint band */
 .hero__subhead {
   font-family: var(--font-body);
   font-size: 1.125rem;

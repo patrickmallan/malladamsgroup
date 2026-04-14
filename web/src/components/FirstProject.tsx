@@ -15,7 +15,7 @@ export function FirstProject() {
           </h2>
           <p className="body-text">
             Nestled between mountains and water on the traditional territory of the
-            Sḵwx̱wú7mesh Nation, Squamish is our first development — chosen not just
+            Sḵwx̱wú7mesh Nation, Squamish is our first development, chosen not just
             for its extraordinary natural beauty, but for its energetic capacity
             to hold what we are building.
           </p>

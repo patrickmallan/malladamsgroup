@@ -19,7 +19,7 @@ export function Problem() {
           </p>
           <p className="body-text">
             This is not bad luck. It is not poor design. It is an architectural
-            failure at the most fundamental level — the energetic foundation was
+            failure at the most fundamental level. The energetic foundation was
             never laid.
           </p>
           <p className="body-text">

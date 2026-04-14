@@ -1,4 +1,4 @@
-/* Malladams Group — design tokens (feminine luxury pass: warmer mineral palette, spatial rhythm) */
+/* Malladams Group: design tokens (feminine luxury pass: warmer mineral palette, spatial rhythm) */
 
 /* Metric-tuned local fallbacks: narrows visible size jump before Google webfonts paint (size-adjust ~ empirical) */
 @font-face {
@@ -20,7 +20,7 @@
 }
 
 :root {
-  /* Warmer darks + mineral lights — dusk / patina, not cold grey */
+  /* Warmer darks + mineral lights: dusk / patina, not cold grey */
   --color-forest: #1c3c2f;
   --color-obsidian: #1b1611;
   --color-gold: #c4a448;
@@ -35,17 +35,17 @@
     serif;
   --font-body: 'Jost', 'MG Jost Fallback', system-ui, sans-serif;
 
-  /* Typography floor — confident modern luxury (small text readable, hierarchy intact) */
+  /* Typography floor: confident modern luxury (small text readable, hierarchy intact) */
   --text-body-size: 1.09375rem;
   --text-eyebrow-size: 0.8125rem;
   --text-button-size: 0.9375rem;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  /* Softer settle — glide, less snap */
+  /* Softer settle: glide, less snap */
   --ease-gentle: cubic-bezier(0.33, 1, 0.32, 1);
   --header-h: 4rem;
 
-  /* Section rhythm — more exhale between major ideas */
+  /* Section rhythm: more exhale between major ideas */
   --section-pad-y: clamp(5.25rem, 11vw, 9rem);
   --content-measure: 40rem;
   --content-measure-wide: 42rem;
@@ -373,7 +373,7 @@ img {
   transform: translateY(1px);
 }
 
-/* Reveal animation — low amplitude, composed */
+/* Reveal animation: low amplitude, composed */
 .reveal {
   opacity: 0;
   transform: translateY(0.45rem);
