@@ -53,9 +53,12 @@
 .layer-card__label {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.06rem;
+  font-size: 1.125rem;
+  font-weight: 500;
   margin: 0;
-  color: rgba(72, 58, 52, 0.92);
+  line-height: 1.48;
+  letter-spacing: 0.01em;
+  color: rgba(44, 36, 32, 0.94);
 }
 
 .layer-card__body {
