@@ -75,8 +75,8 @@
 .contact__notice {
   margin: 0 0 1.65rem;
   padding: 1.1rem 1.2rem;
-  font-size: 0.9375rem;
-  line-height: 1.58;
+  font-size: 0.96875rem;
+  line-height: 1.6;
   color: var(--color-cream-muted);
   border: 1px solid rgba(196, 164, 72, 0.2);
   border-radius: 2px;
@@ -130,11 +130,11 @@
 }
 
 .contact__label {
-  font-size: 0.72rem;
+  font-size: 0.78125rem;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
-  color: rgba(241, 235, 226, 0.58);
+  color: rgba(241, 235, 226, 0.74);
 }
 
 .contact__input {
@@ -204,7 +204,7 @@ textarea.contact__input {
 
 .contact__feedback {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.96875rem;
   text-align: left;
   line-height: 1.55;
 }
@@ -229,8 +229,8 @@ textarea.contact__input {
 
 .contact__success-body {
   margin: 0 0 1.35rem;
-  font-size: 0.98rem;
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.66;
   color: var(--color-cream-muted);
 }
 

@@ -31,8 +31,8 @@
 
 .site-footer__meta {
   margin: 0;
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
-  color: rgba(241, 235, 226, 0.52);
-  line-height: 1.5;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  color: rgba(241, 235, 226, 0.64);
+  line-height: 1.55;
 }

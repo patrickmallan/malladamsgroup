@@ -8,10 +8,16 @@
   --color-gold-soft: rgba(196, 164, 72, 0.32);
   --color-rose: #b8907a;
   --color-cream: #f1ebe2;
-  --color-cream-muted: rgba(241, 235, 226, 0.76);
+  /* Body / secondary: clearer presence without harsh contrast */
+  --color-cream-muted: rgba(241, 235, 226, 0.84);
 
   --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-body: 'Jost', system-ui, sans-serif;
+
+  /* Typography floor — confident modern luxury (small text readable, hierarchy intact) */
+  --text-body-size: 1.09375rem;
+  --text-eyebrow-size: 0.8125rem;
+  --text-button-size: 0.9375rem;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   /* Softer settle — glide, less snap */
@@ -61,7 +67,7 @@ html {
   background: var(--color-cream);
   color: var(--color-obsidian);
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.90625rem;
   font-weight: 500;
   text-decoration: none;
   border-radius: 2px;
@@ -79,8 +85,8 @@ body {
   margin: 0;
   min-height: 100svh;
   font-family: var(--font-body);
-  font-size: 1.0625rem;
-  line-height: 1.72;
+  font-size: var(--text-body-size);
+  line-height: 1.73;
   font-weight: 400;
   color: var(--color-cream);
   background: var(--color-obsidian);
@@ -142,12 +148,12 @@ img {
 }
 
 .section--light .eyebrow {
-  color: rgba(27, 58, 45, 0.85);
+  color: rgba(26, 48, 38, 0.92);
 }
 
 .section--light .body-text,
 .section--light .supporting-line {
-  color: rgba(28, 22, 18, 0.8);
+  color: rgba(28, 22, 18, 0.86);
 }
 
 .section--light .pull-quote {
@@ -161,7 +167,7 @@ img {
 }
 
 .section--light .layer-card__label {
-  color: rgba(27, 58, 45, 0.85);
+  color: rgba(26, 48, 38, 0.9);
 }
 
 .section-divider {
@@ -182,11 +188,11 @@ img {
 /* Typography */
 .eyebrow {
   font-family: var(--font-body);
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
+  font-size: var(--text-eyebrow-size);
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   font-weight: 500;
-  color: rgba(184, 144, 122, 0.88);
+  color: rgba(200, 168, 148, 0.94);
   margin: 0 0 1.35rem;
 }
 
@@ -215,6 +221,7 @@ img {
 .body-text {
   color: var(--color-cream-muted);
   margin: 0;
+  line-height: 1.73;
 }
 
 .body-text + .body-text {
@@ -225,7 +232,7 @@ img {
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  font-size: clamp(1.32rem, 2.45vw, 1.72rem);
   line-height: 1.52;
   color: var(--color-cream);
   border-left: 2px solid rgba(196, 164, 72, 0.65);
@@ -237,17 +244,18 @@ img {
 .supporting-line {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.05rem;
-  color: var(--color-rose);
+  font-size: 1.08rem;
+  color: rgba(200, 168, 150, 0.96);
   margin: 1rem 0 0;
+  line-height: 1.45;
 }
 
 /* Buttons */
 .btn {
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: var(--text-button-size);
   font-weight: 500;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.055em;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-flex;
