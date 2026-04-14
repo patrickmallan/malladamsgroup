@@ -19,9 +19,9 @@ export function Founders() {
           <figure className="founders__figure">
             <img
               className="founders__image"
-              src="/Malladams%20Family.webp"
-              width={1024}
-              height={1536}
+              src="/Malladams%20Family.webp?v=2"
+              width={1600}
+              height={2133}
               loading="lazy"
               decoding="async"
               alt="Annissa Adams and Patrick Mallan with their children. The Malladams Group founders at home — the lived foundation behind their work building structures that hold."
