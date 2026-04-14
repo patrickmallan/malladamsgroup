@@ -14,20 +14,19 @@ export function Problem() {
             You’ve felt it. In the office that drains you by noon. In the
             beautifully designed home that never quite feels like yours. In the
             organization that burns through brilliant people and can’t figure out
-            why. In the community space that had every intention of belonging but
-            somehow never held it.
+            why.
           </p>
           <p className="body-text">
-            This is not bad luck. It is not poor design. It is an architectural
-            failure at the most fundamental level. The energetic foundation was
-            never laid.
+            This is not bad luck. It is not poor design.
+          </p>
+          <p className="body-text">
+            It is an architectural failure at the most fundamental level — the
+            energetic foundation was never laid.
           </p>
           <p className="body-text">
             Nearly every structure built in the modern world was designed without
-            energetic integrity at its core. The result is spaces that exhaust
-            rather than restore. Organizations that consume rather than sustain.
-            Legacies that look solid from the outside and quietly collapse from
-            within.
+            energetic integrity at its core. The result is spaces that exhaust.
+            Organizations that consume. Legacies that collapse from within.
           </p>
           <p className="body-text">
             We are here to change that. And if you’re reading this, you already

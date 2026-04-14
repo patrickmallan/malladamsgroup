@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './Header.css'
 
 const NAV = [
+  { id: 'gap', label: 'The Gap' },
   { id: 'problem', label: 'The Problem' },
   { id: 'framework', label: 'Framework' },
   { id: 'what-we-do', label: 'What We Do' },

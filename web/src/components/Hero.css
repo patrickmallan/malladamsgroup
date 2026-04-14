@@ -106,17 +106,6 @@
   padding-inline: clamp(0.5rem, 2vw, 1rem);
 }
 
-/* Tagline only ("Built to last…"): stepped above .hero__subhead (italic reads smaller at same rem) */
-.hero__tagline {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.3125rem;
-  color: rgba(248, 241, 232, 1);
-  margin: 0 0 1.5rem;
-  letter-spacing: -0.012em;
-  line-height: 1.34;
-}
-
 .hero__headline {
   margin-bottom: 1.75rem;
 }
@@ -135,10 +124,6 @@
 }
 
 @media (min-width: 600px) {
-  .hero__tagline {
-    font-size: 1.5rem;
-  }
-
   .hero__subhead {
     font-size: 1.25rem;
     line-height: 1.64;
@@ -146,10 +131,6 @@
 }
 
 @media (min-width: 1024px) {
-  .hero__tagline {
-    font-size: 1.625rem;
-  }
-
   .hero__subhead {
     font-size: 1.375rem;
     line-height: 1.62;

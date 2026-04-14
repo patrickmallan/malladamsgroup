@@ -3,6 +3,7 @@ import { FirstProject } from './components/FirstProject'
 import { Footer } from './components/Footer'
 import { Founders } from './components/Founders'
 import { Framework } from './components/Framework'
+import { Gap } from './components/Gap'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Problem } from './components/Problem'
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <main id="main">
         <Hero />
+        <Gap />
         <Problem />
         <div className="section-divider" aria-hidden />
         <Framework />

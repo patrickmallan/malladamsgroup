@@ -5,22 +5,22 @@ const VALUES = [
   {
     title: 'Ethical Power',
     body:
-      'Power built on integrity rather than extraction. We believe the most enduring spaces and organizations are the ones where everyone inside them feels their own capacity expand, not diminish. Structures that generate authority through alignment, not control.',
+      'Power built on integrity, not extraction. The most enduring spaces and organizations are the ones where everyone inside feels their own capacity expand — not diminish.',
   },
   {
     title: 'Belonging',
     body:
-      'Not as a feeling you have to earn or manufacture. As an architectural fact. When a space is built right, energetically, physically, and operationally, belonging is simply what it does. People know it the moment they walk in.',
+      'Not something you earn. An architectural fact. When a space is built right, belonging is not manufactured. It’s simply what the space does.',
   },
   {
     title: 'Energetic Integrity',
     body:
-      'Every structure has an energetic blueprint beneath its physical one. When those two blueprints are aligned, what gets built lasts. When they’re not, no amount of beautiful design or strong leadership can hold it together indefinitely. We build from the energetic blueprint first. Always.',
+      'Every structure has an energetic blueprint beneath its physical one. When those two are aligned, what gets built lasts. We build from the energetic blueprint first. Always.',
   },
   {
     title: 'Nervous System Safety',
     body:
-      'The body knows before the mind does. A space with nervous system safety is one where people breathe fully, think clearly, create freely, and want to stay. We design for that quality of ease, because spaces that feel safe at a cellular level are the ones that become home, and the organizations that hold it are the ones that retain their best people.',
+      'The body knows before the mind does. We design for that intelligence — spaces where people breathe fully, think clearly, and want to stay.',
   },
 ] as const
 
@@ -30,13 +30,8 @@ export function Values() {
       <div className="shell values">
         <p className="eyebrow">What we stand for</p>
         <h2 className="display display--lg values__title">
-          The Foundation Beneath Everything We Build.
+          The foundation beneath everything we build.
         </h2>
-        <p className="body-text values__intro">
-          These are not aspirations. They are the non-negotiables that every
-          Malladams project is built on, from the first conversation to the
-          final detail.
-        </p>
         <div className="values__grid">
           {VALUES.map((item) => (
             <article key={item.title} className="value-card">

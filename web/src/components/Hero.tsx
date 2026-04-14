@@ -18,7 +18,6 @@ export function Hero() {
       <div className="hero__shimmer" aria-hidden />
 
       <div className="hero__content shell">
-        <p className="hero__tagline">Built to last. Built to belong.</p>
         <h1 className="display display--xl hero__headline">You belong here.</h1>
         <p className="hero__subhead">
           Most structures were never built to hold what you’re trying to create.

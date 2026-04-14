@@ -6,9 +6,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="shell site-footer__inner">
         <p className="site-footer__brand">Malladams Group</p>
-        <p className="site-footer__meta">
-          © {year} Malladams Group. Built to last. Built to belong.
-        </p>
+        <p className="site-footer__meta">© {year} Malladams Group.</p>
       </div>
     </footer>
   )

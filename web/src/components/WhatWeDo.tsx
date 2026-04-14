@@ -13,21 +13,19 @@ export function WhatWeDo() {
           <article className="what-card">
             <h3 className="what-card__heading">Development</h3>
             <p className="body-text">
-              Malladams Group acquires, designs, and activates properties using
-              our energetic architecture framework. We do not just advise on this
-              work. We do it ourselves. Every property we develop is a living
-              proof of concept. A demonstration that this approach works, that it
-              lasts, and that it is beautiful.
+              We acquire, design, and activate properties using our energetic
+              architecture framework. We don’t just advise on this work — we do
+              it ourselves. Every property we develop is a living proof of
+              concept.
             </p>
           </article>
           <article className="what-card">
             <h3 className="what-card__heading">Consultancy</h3>
             <p className="body-text">
-              We bring the same three-layer framework to the projects of
-              visionary developers, entrepreneurs, and organizations who are ready
-              to build differently. If you are creating something meant to last,
-              whether a home, a business, or a community space, we want to be part
-              of it from the beginning.
+              We bring the same three-layer framework to developers,
+              entrepreneurs, and organizations ready to build differently. If you
+              are creating something meant to last — a home, a business, a
+              community space — we want to be part of it from the beginning.
             </p>
           </article>
         </div>

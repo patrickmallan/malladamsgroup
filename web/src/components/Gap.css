@@ -1,0 +1,20 @@
+.gap__body {
+  max-width: var(--content-measure-wide);
+  margin-inline: auto;
+}
+
+.gap__body .body-text + .body-text {
+  margin-top: 1.4rem;
+}
+
+.gap__question {
+  margin-top: 1.4rem;
+}
+
+.gap__question strong {
+  font-weight: 500;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.4vw, 1.45rem);
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}

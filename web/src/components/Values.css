@@ -1,12 +1,6 @@
 .values__title {
-  margin-bottom: 1.55rem;
-  max-width: 24ch;
-}
-
-.values__intro {
-  max-width: var(--content-measure);
   margin-bottom: 3.25rem;
-  line-height: 1.74;
+  max-width: 24ch;
 }
 
 .values__grid {
