@@ -1,349 +1,57 @@
 import { useId, useState } from 'react'
 import type { FormEvent } from 'react'
-import {
-  type ContactFieldErrors,
-  type ContactFieldKey,
-  validateContactFields,
-} from '../lib/contactValidation'
-import { RevealSection } from './RevealSection'
+import { type ContactFieldErrors, validateContactFields } from '../lib/contactValidation'
 import './Contact.css'
 
 const WEB3FORMS_URL = 'https://api.web3forms.com/submit'
 
-const FIELD_LABEL: Record<ContactFieldKey, string> = {
-  name: 'Name',
-  email: 'Email',
-  building: 'What are you building?',
-  referral: 'How did you find us?',
-}
-
 export function Contact() {
-  const formId = useId()
-  const [fieldErrors, setFieldErrors] = useState<ContactFieldErrors>({})
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>(
-    'idle'
-  )
+  const id = useId()
+  const [errors, setErrors] = useState<ContactFieldErrors>({})
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
+  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as string | undefined
+  const hasBackend = Boolean(accessKey?.trim())
 
-  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as
-    | string
-    | undefined
-  const hasFormBackend = Boolean(accessKey?.trim())
-
-  function clearFieldError(key: ContactFieldKey) {
-    setFieldErrors((prev) => {
-      if (!prev[key]) return prev
-      const next = { ...prev }
-      delete next[key]
-      return next
-    })
-  }
-
-  function resetToIdle() {
-    setStatus('idle')
-    setErrorMessage('')
-    setFieldErrors({})
-  }
-
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    const form = e.currentTarget
-    const fd = new FormData(form)
-    const honeypot = String(fd.get('contact_website') ?? '').trim()
-    if (honeypot) {
-      setFieldErrors({})
-      setErrorMessage('')
-      setStatus('success')
-      form.reset()
-      return
-    }
-
-    const name = String(fd.get('name') ?? '').trim()
-    const email = String(fd.get('email') ?? '').trim()
-    const building = String(fd.get('building') ?? '').trim()
-    const referral = String(fd.get('referral') ?? '').trim()
-
-    const errors = validateContactFields({
-      name,
-      email,
-      building,
-      referral,
-    })
-    if (Object.keys(errors).length > 0) {
-      setFieldErrors(errors)
-      setErrorMessage('')
-      setStatus('idle')
-      return
-    }
-
-    if (!hasFormBackend) {
-      setStatus('error')
-      setErrorMessage(
-        'The inquiry form is not connected yet. Please write to hello@malladamsgroup.com.'
-      )
-      return
-    }
-
-    setFieldErrors({})
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const form = event.currentTarget
+    const data = new FormData(form)
+    if (String(data.get('contact_website') ?? '').trim()) { setStatus('success'); form.reset(); return }
+    const name = String(data.get('name') ?? '').trim()
+    const email = String(data.get('email') ?? '').trim()
+    const organization = String(data.get('organization') ?? '').trim()
+    const interest = String(data.get('interest') ?? 'General Enquiry')
+    const message = String(data.get('message') ?? '').trim()
+    const nextErrors = validateContactFields({ name, email, message })
+    setErrors(nextErrors)
+    if (Object.keys(nextErrors).length) return
+    if (!hasBackend) { setStatus('error'); setErrorMessage('The form is not connected yet. Please use the email link to reach us.'); return }
     setStatus('sending')
     setErrorMessage('')
-
     try {
-      const res = await fetch(WEB3FORMS_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          access_key: accessKey,
-          subject: 'Consultation inquiry, malladamsgroup.com',
-          name,
-          email,
-          from_name: name,
-          message: [
-            'What are you building?',
-            building,
-            '',
-            'How did you find us?',
-            referral,
-          ].join('\n'),
-        }),
-      })
-      const data = (await res.json()) as { success?: boolean; message?: string }
-      if (!res.ok || !data.success) {
-        throw new Error(data.message || 'Something went wrong.')
-      }
+      const response = await fetch(WEB3FORMS_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ access_key: accessKey, subject: `Malladams Group enquiry: ${interest}`, name, email, from_name: name, message: `Area of interest: ${interest}\nOrganization: ${organization || 'Not provided'}\n\n${message}` }) })
+      const result = await response.json() as { success?: boolean }
+      if (!response.ok || !result.success) throw new Error('Submission failed')
       setStatus('success')
       form.reset()
-    } catch {
-      setStatus('error')
-      setErrorMessage(
-        'We could not send your note just now. You are welcome to write directly to hello@malladamsgroup.com.'
-      )
-    }
+    } catch { setStatus('error'); setErrorMessage('We could not send your note just now. Please use the email link to reach us.') }
   }
 
-  const busy = status === 'sending'
-  const locked = busy || status === 'success'
-  /* Only disable while sending — same bright CTA as hero; missing backend is handled in onSubmit */
-  const submitDisabled = busy
-
-  return (
-    <RevealSection id="contact" className="section section--contact">
-      <div className="shell contact">
-        <div className="contact__intro">
-          <p className="eyebrow">Begin</p>
-          <h2 className="display display--lg contact__title">
-            Ready to build something that lasts?
-          </h2>
-          <p className="body-text">
-            If you&apos;ve been feeling the gap — between the space you&apos;re in
-            and the one you know is possible, between the organization you&apos;re
-            running and the one it could be — this is the conversation you&apos;ve
-            been waiting to have.
-          </p>
-          <p className="body-text">
-            A consultation with Malladams Group is not a sales call. It is a
-            genuine inquiry into what you are building, what it needs to truly
-            hold, and whether we are the right partners.
-          </p>
-          <p className="body-text">
-            We work with a small number of clients at a time. Every engagement
-            begins with Annissa and Patrick directly.
-          </p>
-          <p className="contact__email">
-            <a href="mailto:hello@malladamsgroup.com">hello@malladamsgroup.com</a>
-          </p>
-          <p className="body-text contact__closing supporting-line">
-            We review every inquiry personally.
-          </p>
-        </div>
-
-        <div className="contact__panel">
-          {!hasFormBackend && (
-            <p className="contact__notice" role="status">
-              The inquiry form will be connected shortly. For now, please write to{' '}
-              <a href="mailto:hello@malladamsgroup.com">hello@malladamsgroup.com</a>
-              .
-            </p>
-          )}
-
-          <form
-            className="contact__form"
-            id={`${formId}-form`}
-            onSubmit={onSubmit}
-            noValidate
-          >
-            {/* Honeypot: bots only */}
-            <div className="contact__hp" aria-hidden="true">
-              <label htmlFor={`${formId}-hp`}>Company website</label>
-              <input
-                id={`${formId}-hp`}
-                name="contact_website"
-                type="text"
-                tabIndex={-1}
-                autoComplete="off"
-              />
-            </div>
-
-            <div className="contact__field">
-              <label className="contact__label" htmlFor={`${formId}-name`}>
-                {FIELD_LABEL.name}
-              </label>
-              <input
-                id={`${formId}-name`}
-                name="name"
-                type="text"
-                autoComplete="name"
-                required
-                disabled={locked}
-                aria-invalid={fieldErrors.name ? 'true' : undefined}
-                aria-describedby={
-                  fieldErrors.name ? `${formId}-name-err` : undefined
-                }
-                className={fieldErrors.name ? 'contact__input contact__input--error' : 'contact__input'}
-                onInput={() => clearFieldError('name')}
-              />
-              {fieldErrors.name && (
-                <p id={`${formId}-name-err`} className="contact__field-error" role="alert">
-                  {fieldErrors.name}
-                </p>
-              )}
-            </div>
-
-            <div className="contact__field">
-              <label className="contact__label" htmlFor={`${formId}-email`}>
-                {FIELD_LABEL.email}
-              </label>
-              <input
-                id={`${formId}-email`}
-                name="email"
-                type="email"
-                autoComplete="email"
-                inputMode="email"
-                required
-                disabled={locked}
-                aria-invalid={fieldErrors.email ? 'true' : undefined}
-                aria-describedby={
-                  fieldErrors.email ? `${formId}-email-err` : undefined
-                }
-                className={
-                  fieldErrors.email ? 'contact__input contact__input--error' : 'contact__input'
-                }
-                onInput={() => clearFieldError('email')}
-              />
-              {fieldErrors.email && (
-                <p id={`${formId}-email-err`} className="contact__field-error" role="alert">
-                  {fieldErrors.email}
-                </p>
-              )}
-            </div>
-
-            <div className="contact__field">
-              <label className="contact__label" htmlFor={`${formId}-building`}>
-                {FIELD_LABEL.building}
-              </label>
-              <textarea
-                id={`${formId}-building`}
-                name="building"
-                rows={5}
-                required
-                disabled={locked}
-                aria-invalid={fieldErrors.building ? 'true' : undefined}
-                aria-describedby={
-                  fieldErrors.building ? `${formId}-building-err` : undefined
-                }
-                className={
-                  fieldErrors.building
-                    ? 'contact__input contact__input--error'
-                    : 'contact__input'
-                }
-                onInput={() => clearFieldError('building')}
-              />
-              {fieldErrors.building && (
-                <p
-                  id={`${formId}-building-err`}
-                  className="contact__field-error"
-                  role="alert"
-                >
-                  {fieldErrors.building}
-                </p>
-              )}
-            </div>
-
-            <div className="contact__field">
-              <label className="contact__label" htmlFor={`${formId}-referral`}>
-                {FIELD_LABEL.referral}
-              </label>
-              <input
-                id={`${formId}-referral`}
-                name="referral"
-                type="text"
-                autoComplete="off"
-                required
-                disabled={locked}
-                aria-invalid={fieldErrors.referral ? 'true' : undefined}
-                aria-describedby={
-                  fieldErrors.referral ? `${formId}-referral-err` : undefined
-                }
-                className={
-                  fieldErrors.referral
-                    ? 'contact__input contact__input--error'
-                    : 'contact__input'
-                }
-                onInput={() => clearFieldError('referral')}
-              />
-              {fieldErrors.referral && (
-                <p
-                  id={`${formId}-referral-err`}
-                  className="contact__field-error"
-                  role="alert"
-                >
-                  {fieldErrors.referral}
-                </p>
-              )}
-            </div>
-
-            {status === 'error' && errorMessage && (
-              <p className="contact__feedback contact__feedback--error" role="alert">
-                {errorMessage}
-              </p>
-            )}
-            {status === 'success' && (
-              <div
-                className="contact__success"
-                role="status"
-                aria-live="polite"
-              >
-                <p className="contact__success-title">Thank you.</p>
-                <p className="contact__success-body">
-                  Your note has been received. We review every inquiry personally;
-                  you will hear from us when we have had a quiet moment to
-                  respond.
-                </p>
-                <button
-                  type="button"
-                  className="contact__success-action btn btn--ghost"
-                  onClick={resetToIdle}
-                >
-                  Send another message
-                </button>
-              </div>
-            )}
-
-            {status !== 'success' && (
-              <>
-                <button
-                  type="submit"
-                  className="btn btn--primary"
-                  disabled={submitDisabled}
-                  aria-busy={busy}
-                >
-                  {busy ? 'Sending…' : 'Begin the Conversation'}
-                </button>
-              </>
-            )}
-          </form>
-        </div>
-      </div>
-    </RevealSection>
-  )
+  return <section className="section section--contact connect-page"><div className="shell contact">
+    <div className="contact__intro"><p className="eyebrow">Begin the conversation</p><h1 className="display display--xl contact__title">Ready to explore what could become possible?</h1><p className="body-text">If you lead an organization and sense something important beneath the familiar explanation, we welcome a thoughtful conversation. We also welcome enquiries about the wider Malladams Group vision.</p><p className="body-text">Please keep the initial note brief and leave out confidential personnel details.</p><p className="contact__email"><a href="mailto:hello@malladamsgroup.com">hello@malladamsgroup.com</a></p></div>
+    <div className="contact__panel">{!hasBackend && <p className="contact__notice" role="status">The form is not connected yet. Please email <a href="mailto:hello@malladamsgroup.com">hello@malladamsgroup.com</a>.</p>}
+      <form className="contact__form" onSubmit={onSubmit} noValidate>
+        <div className="contact__hp" aria-hidden="true"><label htmlFor={`${id}-hp`}>Website</label><input id={`${id}-hp`} name="contact_website" type="text" tabIndex={-1} autoComplete="off" /></div>
+        <div className="contact__field"><label className="contact__label" htmlFor={`${id}-name`}>Name *</label><input className="contact__input" id={`${id}-name`} name="name" autoComplete="name" required disabled={status === 'sending'} aria-invalid={Boolean(errors.name)} aria-describedby={errors.name ? `${id}-name-error` : undefined} onInput={() => setErrors(previous => ({ ...previous, name: undefined }))}/>{errors.name && <p className="contact__field-error" id={`${id}-name-error`}>{errors.name}</p>}</div>
+        <div className="contact__field"><label className="contact__label" htmlFor={`${id}-email`}>Email *</label><input className="contact__input" id={`${id}-email`} name="email" type="email" autoComplete="email" required disabled={status === 'sending'} aria-invalid={Boolean(errors.email)} aria-describedby={errors.email ? `${id}-email-error` : undefined} onInput={() => setErrors(previous => ({ ...previous, email: undefined }))}/>{errors.email && <p className="contact__field-error" id={`${id}-email-error`}>{errors.email}</p>}</div>
+        <div className="contact__field"><label className="contact__label" htmlFor={`${id}-organization`}>Organization <span className="contact__optional">optional</span></label><input className="contact__input" id={`${id}-organization`} name="organization" autoComplete="organization" disabled={status === 'sending'}/></div>
+        <div className="contact__field"><label className="contact__label" htmlFor={`${id}-interest`}>Area of interest</label><select className="contact__input" id={`${id}-interest`} name="interest" disabled={status === 'sending'}><option>Leadership Engagement</option><option>Future Environments</option><option>General Enquiry</option></select></div>
+        <div className="contact__field"><label className="contact__label" htmlFor={`${id}-message`}>What brings you here? *</label><textarea className="contact__input" id={`${id}-message`} name="message" rows={5} required disabled={status === 'sending'} aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? `${id}-message-error` : undefined} onInput={() => setErrors(previous => ({ ...previous, message: undefined }))}/>{errors.message && <p className="contact__field-error" id={`${id}-message-error`}>{errors.message}</p>}</div>
+        {status === 'error' && <p className="contact__feedback contact__feedback--error" role="alert">{errorMessage}</p>}
+        {status === 'success' && <p className="contact__feedback" role="status">Thank you. Your note has been received.</p>}
+        <button className="btn btn--primary" type="submit" disabled={status === 'sending' || status === 'success' || !hasBackend}>{status === 'sending' ? 'Sending…' : 'Send Enquiry'}</button>
+      </form>
+    </div>
+  </div></section>
 }
