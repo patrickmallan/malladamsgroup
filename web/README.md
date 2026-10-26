@@ -1,73 +1,16 @@
-# React + TypeScript + Vite
+# Malladams Group website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The site is a Vite and React application with six routes:
 
-Currently, two official plugins are available:
+- `/` — introduction to Energetic Architecture and the two expressions of the work
+- `/energetic-architecture` — philosophy, energetic blueprint and values
+- `/work-with-us` — current private leadership engagements led by Annissa
+- `/our-vision` — longer-term environments vision and Squamish connection
+- `/about` — founder biographies and distinct roles
+- `/connect` — short enquiry form and email link
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Run `npm install` and `npm run dev` from this directory to preview locally. Run `npm run build` before deployment.
 
-## React Compiler
+The enquiry form uses Web3Forms. Set `VITE_WEB3FORMS_ACCESS_KEY` in the deployment environment after verifying the receiving inbox. Without a key, the form shows an email alternative and its submit button is disabled. Because this is a Vite client application, the access key is included in the built JavaScript; use a key intended for browser submission and configure the form service's domain protections. Check the receiving address and a real submission before publishing.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+See [website evolution review](../WEBSITE_EVOLUTION_REVIEW.md) for content decisions and outstanding approvals.

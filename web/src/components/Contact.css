@@ -7,6 +7,10 @@
   );
 }
 
+.connect-page { padding-top: calc(var(--header-h) + 4rem); }
+.contact__optional { font-size: .72rem; letter-spacing: .03em; text-transform: none; opacity: .72; }
+select.contact__input { appearance: auto; }
+
 .contact {
   display: grid;
   gap: 3rem;
